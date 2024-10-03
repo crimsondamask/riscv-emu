@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "lib.c"
+#include <stdio.h>
 
 int main() {
   int result = add(40, 2);

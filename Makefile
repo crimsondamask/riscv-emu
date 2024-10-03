@@ -1,13 +1,14 @@
 # You can change these variables if you want to use a different compiler or debugger
 CC = clang
 DBG = lldb
+CFLAGS = -Wall -std=c11 -O0 -g
 
 # We use .PHONY to tell make to always run these commands even if a file exists
 # with the same name in this directory. For more information on .PHONY, see
 # https://www.gnu.org/software/make/manual/html_node/Phony-Targets.html
 .PHONY: build-main
 build-main: build-dir
-	$(CC) -Wall -O0 -g -o build/main src/main.c
+	$(CC) $(CFLAGS) -o build/main src/main.c
 
 .PHONY: check
 check:
